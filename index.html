@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/docs/styles/style.css" />
+    <title>Jump Game</title>
+  </head>
+  <body>
+    <main>
+      <!-- #game-intro is initially shown on the game start screen -->
+      <div id="game-intro">
+        <img src="/docs/images/game-start.jpg" onclick="startGame()" alt="" class="openImg" />
+        <section class="start-setting">
+            <button id="start-button">Let's Go</button>
+            <p id="instructions">Use the Arrow Up to jump!</p>
+            <ul id="inst-list">
+              <li>Avoid the foxes!</li>
+              <li>Watch out for the cacti!</li>
+              <li>Restore life with dragonflies!</li>
+            </ul>
+            <button id="game-intro-button">Play Intro Soundtrack</button>
+        </section>
+       
+      </div>
+​
+      <div id="game-container">
+        <div class="stats">
+          <p>Score: <span id="score">0</span></p>
+          <p>Lives: <span id="lives">3</span></p>
+        </div>
+        <!-- #game-screen is initially hidden using CSS style display: none -->
+        <div id="game-screen" class = "screenImg">
+          <div id="road">
+            <img src="/docs/images/road.jpg" alt="moving road">
+          </div>
+        </div>
+      </div>
+​
+      <!-- #game-end is initially hidden using CSS style display: none -->
+      <div id="game-end">
+        <img src="/docs/images/gameover.avif" onclick="startGame()" alt="" class="endImg" />
+        <section class = "gameOver-set">
+          <h1 id = "end-message">Try harder... Trust the process</h1>
+          <button id="team-button">Meet the Team</button>
+        </section>
+        
+         <br/>
+         <button id="restart-button">Restart</button>
+      </div>
+
+      <div id="team-screen">
+        <section id = "team-set">
+          <h1>We hope you enjoyed our game!</h1>
+          <p id = "team-message">Click below to view our LinkedIn and Github profiles</p>
+          <div id="contact">
+            <ul>
+              <li><button class="contact-btn" id="aamir-link">Aamir LinkedIn</button></li>
+              <li><button class="contact-btn" id="aamir-git">Aamir Github</button></li>
+            </ul>
+            <ul>
+              <li><button class="contact-btn" id="andre-link">André LinkedIn</button></li>
+              <li><button class="contact-btn" id="andre-git">André Github</button></li>
+            </ul>
+          </div>
+        </section>
+        <button id="final-button">Start-Menu</button>
+      </div>
+
+    </main>
+​
+    <script type="text/javascript" src="/docs/scripts/obstacle.js"></script>
+    <script type="text/javascript" src="/docs/scripts/player.js"></script>
+    <script type="text/javascript" src="/docs/scripts/game.js"></script>
+    <script type="text/javascript" src="/docs/scripts/script.js"></script>
+  </body>
+</html>
