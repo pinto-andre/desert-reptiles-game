@@ -21,6 +21,7 @@ body {
     position: relative;
     display: inline-block;
   }
+
   .start-setting{
     text-align: center;
     position: absolute; /* Positioned relative to the .image-container */
@@ -184,7 +185,7 @@ body {
   
   .gameOver-set{
     text-align: center;
-    position: absolute; /* Positioned relative to the .image-container */
+    position: absolute; /* Positioned absolute to the .image-container */
     top: 275px; /* Adjust this to position the div vertically */
     left: 620px; /* Adjust this to position the div horizontally */
     width: 250px; /* Set the width of the div */

@@ -25,6 +25,7 @@ class Game {
         this.endMusic = document.createElement("audio");
         this.endMusic.src = "/docs/sounds/desert-intro-sound.mp3";
         this.gameEndScreen.appendChild(this.endMusic);
+        this.endMusic.loop = true;
 
 
         //player

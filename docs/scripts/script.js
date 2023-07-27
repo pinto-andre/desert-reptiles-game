@@ -15,6 +15,7 @@ window.onload = function () {
     //Intro music
     let backgroundMusicIntro = document.createElement("audio");
     backgroundMusicIntro.src = "/docs/sounds/desert-intro-sound.mp3";
+    backgroundMusicIntro.loop = true;
 
     let startScreen = document.getElementById('game-intro');
     startScreen.appendChild(backgroundMusicIntro);
@@ -42,7 +43,7 @@ window.onload = function () {
     // Make social buttons work
     // Add click event handlers to each button
     aamirLinkBtn.addEventListener("click", function () {
-      goSocial("https://www.linkedin.com/in/aamir-profile/");
+      goSocial("http://linkedin.com/in/aamir-mushtaq-97236224a");
     });
 
     aamirGitBtn.addEventListener("click", function () {
