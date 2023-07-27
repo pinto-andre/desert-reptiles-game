@@ -16,7 +16,7 @@ class Obstacle{
         //create the HTML element and default styling
 
         this.element = document.createElement("img");
-        this.element.src = "./docs/images/cacti.png";
+        this.element.src = "docs/images/cacti.png";
         this.element.style.position = "absolute";
         this.element.style.top = `${this.top}px`;
         this.element.style.left = `${this.left}px`;
@@ -53,7 +53,7 @@ class Obstacle{
             this.height = 35;
             //create the HTML element and default styling
             this.element = document.createElement("img");
-            this.element.src = "./docs/images/fennec.png";
+            this.element.src = "docs/images/fennec.png";
             this.element.style.position = "absolute";
             this.element.style.top = `${this.top}px`;
             this.element.style.left = `${this.left}px`;
@@ -86,7 +86,7 @@ class Obstacle{
             this.height = 50;
             //create the HTML element and default styling
             this.element = document.createElement("img");
-            this.element.src = "./docs/images/dragonfly.png";
+            this.element.src = "docs/images/dragonfly.png";
             this.element.style.position = "absolute";
             this.element.style.top = `${this.top}px`;
             this.element.style.left = `${this.left}px`;
