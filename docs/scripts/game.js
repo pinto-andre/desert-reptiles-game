@@ -33,8 +33,8 @@ class Game {
             this.gameScreen,
             200,
             590,
-            80,
-            40,
+            90,
+            50,
             "docs/images/chameleon2.png"
         );
 
@@ -51,8 +51,9 @@ class Game {
         //obstacles = {trees: [], rocks: []}  
 
         this.obstacles = [];
-        this.fennec = [];
+        this.falcon = [];
         this.dragonfly = [];
+        this.cacti = [];
 
         //flag to give info about process of pushing (when setTimeout runs it turns to true and when in finishes returns to false)
         this.isPushingObstacle = false;
@@ -166,23 +167,24 @@ class Game {
                 setTimeout(()=>{
                     this.obstacles.push(new Obstacle(this.gameScreen));
                     this.isPushingObstacle = false;
-                }, Math.floor(Math.random()*600+25))
-            }, 500)
+                }, Math.floor(Math.random()*800+50))
+            }, Math.floor(Math.random()*800+300))
+            
         }
 
 
-        //Fox collision
+        //Falcon collision
 
         //Check for collision and if a Fennec is still on the screen
-        for(let i = 0; i < this.fennec.length; i++){
-            const obstacle = this.fennec[i];
+        for(let i = 0; i < this.falcon.length; i++){
+            const obstacle = this.falcon[i];
             obstacle.move();
             //Check if the player collided with an obstacle
             if(this.player.didCollide(obstacle)){
                 //remove the obstacle from the DOM
                 obstacle.element.remove();
                 //remove the obstacle from the array
-                this.fennec.splice(i,1);
+                this.falcon.splice(i,1);
                 //Reduce player's life by 1
                 this.lives --;
             }
@@ -193,14 +195,17 @@ class Game {
                 //Remove the obstacle from the HTML
                 obstacle.element.remove();
                 //remove the obstacle from the array
-                this.fennec.splice(i,1);
+                this.falcon.splice(i,1);
             }
         }
-        if(!this.fennec.length && !this.isPushingObstacle){
+        if(!this.falcon.length && !this.isPushingObstacle){
             this.isPushingObstacle = true;
             setTimeout(()=>{
-                this.fennec.push(new Fennec(this.gameScreen));
-                this.isPushingObstacle = false;
+                this.falcon.push(new Falcon(this.gameScreen));
+                setTimeout(()=>{
+                    this.falcon.push(new Falcon(this.gameScreen));
+                    this.isPushingObstacle = false;
+                }, Math.floor(Math.random()*800+50))
             }, Math.floor(Math.random()*1500+ 500))
         }
 
@@ -237,9 +242,13 @@ class Game {
             this.isPushingObstacle = true;
             setTimeout(()=>{
                 this.dragonfly.push(new Dragonfly(this.gameScreen));
-                this.isPushingObstacle = false;
-            },  Math.floor(Math.random()*2000+ 700))
+                setTimeout(()=>{
+                    this.dragonfly.push(new Dragonfly(this.gameScreen));
+                    this.isPushingObstacle = false;
+                }, Math.floor(Math.random()*1000+ 200))
+            },  500)
         }
+        
     }
 
 
@@ -276,4 +285,5 @@ class Game {
         this.teamScreen.style.display = 'block';
     }
 
+    
 }

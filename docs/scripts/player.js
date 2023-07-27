@@ -24,11 +24,14 @@ class Player{
         this.element.src = imgSrc;
         this.element.style.position = "absolute";
 
+
+
         //Set up default element's properties
         this.element.style.width = `${width}px`; //players width
         this.element.style.height = `${height}px`; //players height
         this.element.style.left = `${left}px`; //players horizontal position
         this.element.style.top = `${top}px`; //players vertical position
+        
 
         this.isJumping = false;
 
@@ -59,11 +62,11 @@ class Player{
          }
 
         //Top side
-        if(this.top < 300){
-            this.top = 300;
+        if(this.top < 200){
+            this.top = 200;
         }
 
-        else if (this.top >= 300 && this.isJumping){
+        else if (this.top >= 200 && this.isJumping){
             this.velocityY += 1
             this.top += this.velocityY;
         }
@@ -79,7 +82,7 @@ class Player{
     }
 
     handleJump(){
-        this.velocityY = -22;
+        this.velocityY = -25;
         this.isJumping = true;
     }
 

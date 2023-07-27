@@ -1,22 +1,22 @@
 
-//Cactus obstacle
+//Cactus 1 obstacle
 
 class Obstacle{
     constructor(gameScreen){
         this.gameScreen = gameScreen
 
         //random position for the appearance of the obstacles
-        this.top = 580; //we only want obstacles appearing on 300px heigth and starting on pixel 300.
+        this.top = 550; //we only want obstacles appearing on 300px heigth and starting on pixel 300.
 
         //appear on right
         this.left = 970;
-        this.width = 30;
-        this.height = 60;
+        this.width = 100;
+        this.height = 125;
 
         //create the HTML element and default styling
 
         this.element = document.createElement("img");
-        this.element.src = "docs/images/cacti.png";
+        this.element.src = "docs/images/cacti2.png";
         this.element.style.position = "absolute";
         this.element.style.top = `${this.top}px`;
         this.element.style.left = `${this.left}px`;
@@ -40,20 +40,20 @@ class Obstacle{
     }
 }
 
-// Fox obstacle
+// falcon obstacle
 
-    class Fennec{
+    class Falcon{
         constructor(gameScreen){
             this.gameScreen = gameScreen
             //random position for the appearance of the obstacles
-            this.top = 590; //we only want obstacles appearing on 300px heigth and starting on pixel 300.
+            this.top = Math.floor(Math.random()*300+250); //we only want obstacles appearing on 300px heigth and starting on pixel 300.
             //appear on right
             this.left = 970;
-            this.width = 85;
-            this.height = 35;
+            this.width = 100;
+            this.height = 50;
             //create the HTML element and default styling
             this.element = document.createElement("img");
-            this.element.src = "docs/images/fennec.png";
+            this.element.src = "docs/images/falcon.png";
             this.element.style.position = "absolute";
             this.element.style.top = `${this.top}px`;
             this.element.style.left = `${this.left}px`;
@@ -67,7 +67,7 @@ class Obstacle{
         }
         move(){
             //Drop the obstacle 3px to the bottom (you can chose the number of pixels)
-            this.left -= 6;
+            this.left -= 5;
             this.updatePosition();
         }
     }
@@ -79,7 +79,7 @@ class Obstacle{
         constructor(gameScreen){
             this.gameScreen = gameScreen
             //random position for the appearance of the obstacles
-            this.top = 530; //we only want obstacles appearing on 300px heigth and starting on pixel 300.
+            this.top =  Math.floor(Math.random()*150+350); //we only want obstacles appearing on 300px heigth and starting on pixel 300.
             //appear on right
             this.left = 970;
             this.width = 100;
