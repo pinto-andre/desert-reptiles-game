@@ -6,11 +6,11 @@ class Obstacle{
         this.gameScreen = gameScreen
 
         //random position for the appearance of the obstacles
-        this.top = 550; //we only want obstacles appearing on 300px heigth and starting on pixel 300.
+        this.top = 540; //we only want obstacles appearing on 300px heigth and starting on pixel 300.
 
         //appear on right
         this.left = 970;
-        this.width = 100;
+        this.width = 85;
         this.height = 125;
 
         //create the HTML element and default styling
@@ -67,7 +67,7 @@ class Obstacle{
         }
         move(){
             //Drop the obstacle 3px to the bottom (you can chose the number of pixels)
-            this.left -= 5;
+            this.left -= 8;
             this.updatePosition();
         }
     }

@@ -67,8 +67,9 @@ class Player{
         }
 
         else if (this.top >= 200 && this.isJumping){
-            this.velocityY += 1
+            this.velocityY += 0.5
             this.top += this.velocityY;
+            
         }
         
 
@@ -82,7 +83,7 @@ class Player{
     }
 
     handleJump(){
-        this.velocityY = -25;
+        this.velocityY = -17.5;
         this.isJumping = true;
     }
 
