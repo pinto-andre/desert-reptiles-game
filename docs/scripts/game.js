@@ -17,13 +17,13 @@ class Game {
         //taking care of music
         //gameScreen music
         this.gameMusic = document.createElement("audio");
-        this.gameMusic.src = "/docs/sounds/pokemon-ruby-desert.mp3";
+        this.gameMusic.src = "./docs/sounds/pokemon-ruby-desert.mp3";
         this.gameScreen.appendChild(this.gameMusic);
         this.gameMusic.loop = true;
 
         //endScreen music
         this.endMusic = document.createElement("audio");
-        this.endMusic.src = "/docs/sounds/desert-intro-sound.mp3";
+        this.endMusic.src = "./docs/sounds/desert-intro-sound.mp3";
         this.gameEndScreen.appendChild(this.endMusic);
         this.endMusic.loop = true;
 
@@ -35,7 +35,7 @@ class Game {
             590,
             80,
             40,
-            "/docs/images/chameleon2.png"
+            "./docs/images/chameleon2.png"
         );
 
         //style for game board

@@ -14,7 +14,7 @@ window.onload = function () {
 
     //Intro music
     let backgroundMusicIntro = document.createElement("audio");
-    backgroundMusicIntro.src = "/docs/sounds/desert-intro-sound.mp3";
+    backgroundMusicIntro.src = "./docs/sounds/desert-intro-sound.mp3";
     backgroundMusicIntro.loop = true;
 
     let startScreen = document.getElementById('game-intro');

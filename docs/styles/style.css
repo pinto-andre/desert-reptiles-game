@@ -4,7 +4,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(/docs/images/scroll.jpg);
+    background-image: url(./docs/images/scroll.jpg);
     background-size: cover;
   }
 
@@ -124,16 +124,16 @@ body {
 
 @-webkit-keyframes background {
   0% {
-    background-image: url(/docs/images/morning.jpg);
+    background-image: url(./docs/images/morning.jpg);
   }
   40% {
-    background-image: url(/docs/images/evening.jpg);
+    background-image: url(./docs/images/evening.jpg);
   }
   60% {
-    background-image: url(/docs/images/night.jpeg);
+    background-image: url(./docs/images/night.jpeg);
   }
   100% {
-    background-image: url(/docs/images/morning.jpg);
+    background-image: url(./docs/images/morning.jpg);
   }
 }
 
@@ -143,7 +143,7 @@ body {
   }*/
 
   #game-screen:hover {
-    background-image: url(/docs/images/night.jpg);
+    background-image: url(./docs/images/night.jpg);
   }
   
 
@@ -226,7 +226,7 @@ body {
     justify-content: center;
     overflow: hidden;
     position: relative;
-    background-image: url(/docs/images/teamImg.avif);
+    background-image: url(./docs/images/teamImg.avif);
     background-size: cover;
     width: 1000px;
     height: 700px;
